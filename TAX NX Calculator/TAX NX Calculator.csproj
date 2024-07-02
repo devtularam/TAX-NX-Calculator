@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>TAX_NX_Calculator</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <PackageIcon>logo.jpg</PackageIcon>
+    <Title>VAT NET Calculator</Title>
+    <PackageId>VAT NET Calculator</PackageId>
+    <Authors>Tularam Kathariya</Authors>
+    <Product>VAT NET Calculator</Product>
+    <Description>This calculator Application is Developed By Tularam Kathariya,
+In this application you can Extract NET amount from VAT Amount or Find Taxable Amount From NET amountin simple 3 Steps
+
+Steps:
+1. Input Amount
+2. Input or Select Rate From Drop Down Menu
+3. Click Calculate Tax to get Tax Value of Net Price or Click on Calculate Net to get Net Amount from VAT amount.</Description>
+    <Copyright>Tularam Kathariya</Copyright>
+    <PackageProjectUrl>https://trk.com.np</PackageProjectUrl>
+    <NeutralLanguage>en</NeutralLanguage>
+    <AssemblyVersion>1.0</AssemblyVersion>
+    <FileVersion>1.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <IsPublishable>True</IsPublishable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsPublishable>True</IsPublishable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\Documents\APP Docs\logo.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
